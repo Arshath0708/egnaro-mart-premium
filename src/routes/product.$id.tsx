@@ -112,7 +112,7 @@ function ProductDetail() {
               {tab === "desc" && <p className="leading-relaxed">{product.description}</p>}
               {tab === "spec" && (
                 <div className="grid gap-2 sm:grid-cols-2">
-                  {Object.entries(product.specs).map(([k, v]) => (
+                  {Object.entries(product.specs as Record<string, string>).map(([k, v]) => (
                     <div key={k} className="glass flex justify-between rounded-lg px-4 py-2.5">
                       <span className="text-muted-foreground">{k}</span><span className="font-medium text-foreground">{v}</span>
                     </div>
