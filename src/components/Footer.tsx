@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Phone, Mail, MapPin, Clock, Zap, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 export function Footer() {
   return (
@@ -8,17 +9,15 @@ export function Footer() {
         <div className="glass-strong rounded-3xl p-8 md:p-12">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <div className="flex items-center gap-2.5">
-                <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary shadow-glow"><Zap className="h-4 w-4 text-primary-foreground" /></div>
-                <div className="font-display text-xl font-bold"><span>EGNARO</span><span className="ml-1 text-gradient">MART</span></div>
-              </div>
+              <img
+  src={logo}
+  alt="Egnaro Mart"
+  className="h-14 w-auto object-contain"
+/>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 At Egnaro Mart, we bring quality electronics, hardware and industrial products directly to your doorstep at the best prices.
               </p>
-              <div className="mt-5 flex gap-3">
-                <a href="#" className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface-2/50 transition-all hover:border-primary hover:shadow-glow"><Instagram className="h-4 w-4" /></a>
-                <a href="#" className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface-2/50 transition-all hover:border-primary hover:shadow-glow"><Facebook className="h-4 w-4" /></a>
-              </div>
+              
             </div>
 
             <div>
@@ -69,7 +68,7 @@ export function Footer() {
 
           <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
             <div>© 2026 Egnaro Mart. All Rights Reserved.</div>
-            <div>Made with ❤️ in Tamil Nadu</div>
+            
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, ShoppingBag, Menu, X, Zap } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { CATEGORIES } from "@/lib/products";
+import logo from "@/assets/logo.jpeg";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -38,13 +39,11 @@ export function Navbar() {
       <div className={`mx-auto max-w-7xl px-4 transition-all duration-500`}>
         <div className={`glass-strong flex items-center gap-3 rounded-2xl px-4 py-3 transition-all duration-500 ${scrolled ? "shadow-elevated" : ""}`}>
           <Link to="/" className="flex items-center gap-2.5">
-            <div className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary shadow-glow">
-              <Zap className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
-            </div>
-            <div className="font-display text-xl font-bold tracking-tight">
-              <span className="text-foreground">EGNARO</span>
-              <span className="ml-1 text-gradient">MART</span>
-            </div>
+            <img
+  src={logo}
+  alt="Egnaro Mart"
+  className="h-11 w-auto object-contain"
+/>
           </Link>
 
           <form onSubmit={submit} className="ml-4 hidden flex-1 items-center md:flex">
